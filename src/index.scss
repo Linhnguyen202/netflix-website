@@ -25,12 +25,16 @@
     }
 }
 .pagination{
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     .selected{
         @apply text-primary
+    }
+    @media (min-width: 768px) {
+        font-size: 16px;
     }
 }
 .skeleton{

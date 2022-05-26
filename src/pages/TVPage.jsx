@@ -60,14 +60,14 @@ const TVPage = ({kind="tv"}) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg></button>
             </div>
-            {loading && <div className="grid grid-cols-4 gap-10">
+            {loading && <div className="grid gap-5 lg:grid-cols-4 sm:grid-cols-2 sm:gap-6">
                 {new Array(itemsPerPage).fill(0).map(()=>{
                     return (
                         <MovieCartSkeleton key={v4()}></MovieCartSkeleton>
                     )
                 })}
             </div>}
-            {!loading && <div><div className="grid grid-cols-4 gap-10">
+            {!loading && <div><div className="grid gap-5 lg:grid-cols-4 sm:grid-cols-2 sm:gap-6">
                   {movies  && movies.length  > 0 && movies.map(item=>{
                     return (
                         <MovieCart type="tv" key={item.id} item={item}></MovieCart>
