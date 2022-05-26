@@ -8,6 +8,7 @@ import Main from "./components/layout/Main";
 import MovieCart from "./components/movie/MovieCart";
 import MovieList from "./components/movie/MovieList";
 import TVPage from "./pages/TVPage";
+import NotFoundPage from "./pages/NotFoundPage";
 const HomePage = lazy(()=>import("./pages/HomePage"))
 const MovieDetail = lazy(()=>import("./pages/MovieDetail"))
 const MoviePage = lazy(()=>import("./pages/MoviePage"))
@@ -23,6 +24,7 @@ function App() {
           <Route path="/movie/:movieId" element={<MovieDetail kind = "movie"></MovieDetail>}></Route>
           <Route path="/tv/:movieId" element={<MovieDetail kind="tv"></MovieDetail>}></Route>
       </Route>
+      <Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
    </Routes>
     </Suspense>
    
